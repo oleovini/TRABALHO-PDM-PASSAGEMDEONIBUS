@@ -19,15 +19,45 @@
         <header class="cabecalhoConteudo">
           <h2>Geolocalização</h2>
         </header>
-      
-        <div class="conteudoLocalizacao">
-          <p>Latitude: <span id="latitude">0.0</span></p>
-          <p>Logitude: <span id="longitude">0.0</span></p>
-          <div><button class="botao" id="localizacao">Capturar Localização</button></div>
+
+        <div class="form" id="formulario">
+          <form id="form1" class="form1" method="post">
+            <div class="dados">
+              <label>CEP (Somente números):</label>
+              <input type="text" name="cep" id="cep" maxlength="8" />
+            </div>
+
+            <div class="dados">
+              <label>Rua:</label><br />
+              <input type="text" name="rua" id="rua" size="45" />
+            </div>
+
+            <div class="dados">
+              <label>Número:</label><br />
+              <input type="text" name="numero" id="numero" size="5" />
+            </div>
+
+            <div class="dados">
+              <label>Bairro:</label><br />
+              <input type="text" name="bairro" id="bairro" size="25" />
+            </div>
+
+            <div class="dados">
+              <label>Cidade:</label><br />
+              <input type="text" name="cidade" id="cidade" size="25" />
+            </div>
+
+            <div class="dados">
+              <label>Estado:</label><br />
+              <input type="text" name="estado" id="estado" size="2" />
+            </div>
+          </form>
+          <button onclick="SalvarDados()">Salvar</button>
         </div>
-        <p><iframe id="mapa" class="map_part" width="450"  height="450"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ></iframe></p>
+
+        <p><iframe id="mapa" class="map_part" width="450" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></p>
       </div>
-        
+
       <footer class="rodape">
         Progressive Web Application Geolocation
       </footer>

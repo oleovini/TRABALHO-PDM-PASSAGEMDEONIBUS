@@ -43,3 +43,9 @@ body {
   font-size: 16px;
   width: 100%;
 }
+
+.dados{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
