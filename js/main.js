@@ -1,4 +1,3 @@
-// Registrar a Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {
@@ -11,7 +10,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Obter referências aos elementos do formulário e do mapa
+
 var cepInput = document.getElementById("cep");
 var ruaInput = document.getElementById("rua");
 var numeroInput = document.getElementById("numero");
@@ -66,9 +65,6 @@ function AtualizarMapa(cep, rua, numero, cidade, estado) {
     });
   }
 }
-
-
-
 
 const erro = (error) => {
   let errorMessage;
