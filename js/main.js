@@ -112,8 +112,6 @@ function salvarNoIndexedDB(dados) {
       objectStore = db.createObjectStore("dados", { keyPath: "id", autoIncrement: true });
       objectStore.createIndex("nome", "nome", { unique: false });
       objectStore.createIndex("cep", "cep", { unique: false });
-      objectStore.createIndex("latitude", "latitude", { unique: false });
-      objectStore.createIndex("longitude", "longitude", { unique: false });
       objectStore.createIndex("rua", "rua", { unique: false });
       objectStore.createIndex("numero", "numero", { unique: false });
       objectStore.createIndex("bairro", "bairro", { unique: false });
@@ -174,8 +172,6 @@ function ListarDados() {
           <strong>Número:</strong> ${cursor.value.numero} <br>
           <strong>Bairro:</strong> ${cursor.value.bairro} <br>
           <strong>Cidade:</strong> ${cursor.value.cidade} <br>
-          <strong>Latitude:</strong> ${cursor.value.latitude} <br>
-          <strong>Longitude:</strong> ${cursor.value.longitude} <br>
           <hr>
         `;
         listaDadosContainer.appendChild(item);
