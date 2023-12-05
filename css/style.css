@@ -67,11 +67,10 @@ body, html {
 .salvar:hover{
   background-color:  rgb(204, 44, 68);
 }
-#mapa{
-  height: 89%;
-}
+
 .side1{
   height: 100%;
+  width: 100%;
 }
 label{
   font-size: 2.8vh;

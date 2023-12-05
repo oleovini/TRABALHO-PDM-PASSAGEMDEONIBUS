@@ -1,69 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PWA Geolocation Capturando a Localização</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" href="img/pwa-iicon-256.png">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="favicon.ico">
-    <meta name="theme-color" content="white" />
-    <script src="https://unpkg.com/idb@5.3.4/build/iife/index-min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROJETO PASSAGEM DE ÔNIBUS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="apple-touch-icon" href="img/pwa-iicon-256.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico">
+  <meta name="theme-color" content="white" />
 </head>
-
-  <body>
-    <section class="container">
-      <header class="cabecalho">
+<body>
+  <section class="container">
+    <header class="cabecalho">
+    </header>
+    <div class="conteudo">
+      <header class="cabecalhoConteudo">
       </header>
-      <div class="conteudo">
-        <header class="cabecalhoConteudo">
-        </header>
-        <div class="side1">
-          <iframe src="https://maps.google.com/maps?q=&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="mapa" class="map_part" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-          <button class="btn botao" id="localizacao">Capturar Localização atual</button>
-        </div>
-        <div class="form" id="formulario">
-          <form id="form1" class="form1" method="post">
-            <span>
-              <h2>CADASTRAR</h2>
-            </span>
-            <div class="dados nome">
-              <label>Nome:</label>
-              <input type="text" name="nome" id="nome"/>
-            </div>
-            <div class="dados">
-              <label>CEP (Somente números):</label>
-              <input type="text" name="cep" id="cep" maxlength="8" />
-            </div>
-
-            <div class="dados rua">
-              <label>Rua:</label>
-              <input type="text" name="rua" id="rua" size="45" />
-            </div>
-
-            <div class="dados num">
-              <label>Número:</label>
-              <input type="text" name="numero" id="numero" size="5" />
-            </div>
-
-            <div class="dados bairro">
-              <label>Bairro:</label>
-              <input type="text" name="bairro" id="bairro" size="25" />
-            </div>
-
-            <div class="dados cdd">
-              <label>Cidade:</label>
-              <input type="text" name="cidade" id="cidade" size="25" />
-            </div>
-          </form>
-         <div class="container2"> 
+      <div class="side1">
+        <iframe src="https://maps.google.com/maps?q=&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="mapa" class="map_part" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+      <div class="form" id="formulario">
+        <form id="form1" class="form1" method="post">
+          <span>
+            <h2>CADASTRAR</h2>
+          </span>
+          <div class="dados nome">
+            <label>Nome:</label>
+            <input type="text" name="nome" id="nome"/>
+          </div>
+          <div class="dados">
+            <label>CEP (Somente números):</label>
+            <input type="text" name="cep" id="cep" maxlength="8" />
+          </div>
+          <div class="dados rua">
+            <label>Rua:</label>
+            <input type="text" name="rua" id="rua" size="45" />
+          </div>
+          <div class="dados num">
+            <label>Número:</label>
+            <input type="text" name="numero" id="numero" size="5" />
+          </div>
+          <div class="dados bairro">
+            <label>Bairro:</label>
+            <input type="text" name="bairro" id="bairro" size="25" />
+          </div>
+          <div class="dados cdd">
+            <label>Cidade:</label>
+            <input type="text" name="cidade" id="cidade" size="25" />
+          </div>
+        </form>
+        <div class="container2"> 
           <button onclick="SalvarDados()" class="salvar" >Salvar</button>
         </div>
-        </div>
       </div>
-      <button class="btn list">Listar</button>
-    </section>
-    <script src="js/main.js"></script>
-  </body>
+    </div>
+    <button class="btn list" onclick="ListarDados()">Listar</button>
+    <div id="lista-dados"></div> <!-- Nova área para exibir a lista -->
+  </section>
+  <script src="js/main.js"></script>
+</body>
 </html>
