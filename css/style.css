@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'); 
 
-body { 
+body, html { 
   background-color: rgb(52, 73, 94); 
   color: white;
   font-family: 'Roboto', sans-serif;
+  height: 100%;
 }
 
 .container {
   box-sizing: border-box;
   max-width: 100%;
-  width: 60%;
+  width: 75%;
+  height: 80vh;
   margin: 0 auto;
 }
 
 .conteudo{
-  position: relative;
-  margin: auto;
+  background-color: rgb(44, 62, 80);
+  margin: 0;
   display: flex;
   text-align: left;
   flex-direction: row;
-  height: 90vh;
+  height: 100%;
 }
 .conteudoLocalizacao { 
   font-size: 1.5em;
@@ -38,18 +40,52 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
+  height: 13%;
 }
 
 .form{
   background-color: rgb(44, 62, 80);
 } 
 .salvar{
+  color: white;
   position: relative;
   border: none;
-  margin-top: 4vh;
   width: 100%;
-  height: 8.4%;
+  height: 100%;
+  font-size: 3vh;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+  background-color: rgb(231,60,87);
+}
+.container2{
+  position: relative;
+  height: 7.6%;
+}
+.salvar:hover{
+  background-color:  rgb(204, 44, 68);
+}
+#mapa{
+  height: 89%;
+}
+.side1{
+  height: 100%;
+}
+label{
+  font-size: 2.8vh;
+}
+h2{
+  text-align: center;
+}
+.btn{
+  color: white;
+  position: relative;
+  border: none;
+  margin-top: 4.3%;
+  width: 100%;
+  height: 7.5%;
   font-size: 3vh;
   font-weight: bold;
   text-transform: uppercase;
@@ -58,15 +94,28 @@ body {
   background-color: rgb(231,60,87);
   margin-bottom: 0px;
 }
-.salvar:hover{
-  background-color:  rgb(204, 44, 68);
+
+.btn:hover{
+  background-color:  rgb(204, 44, 68);  
 }
-#mapa{
+
+.list{
+  width: 100%;
+  margin-top: 2vh;
+  height: 5vh;
+}
+
+#formulario{
+  position: relative;
+  width: 100%;
   height: 100%;
 }
-label{
-  font-size: 2.8vh;
+.form1{
+  position: relative;
+  height: 89%;
 }
-h2{
-  text-align: center;
+
+.map_part{
+  height: 100%;
+  width: 100%;
 }
